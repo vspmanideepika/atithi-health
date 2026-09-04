@@ -271,3 +271,43 @@ ode_modules, dist, logs, and temporary binary uploads.
 * **Your Understanding/Modification**:
   * Understood the best practices for clean staging, exclusion of sensitive keys, and managing multi-account GitHub CLI authentications.
 
+---
+
+## Summary of AI Usage & Quantification 
+
+Based on the official **AI Usage Quantification Guidelines** for the App Dev Lab Project, the total AI assistance contribution across all 16 prompt history entries is calculated as follows:
+
+### Itemized Breakdown by Rubric Weights
+
+#### 1. Frontend (React — Max 40% Weight)
+* **Components (`/components`)**: Weight 10% × 40% AI Assistance = **4.00%** *(Entry 5, Entry 8)*
+* **Pages (`/pages`)**: Weight 15% × 45% AI Assistance = **6.75%** *(Entry 7, Entry 9, Entry 10, Entry 11, Entry 12, Entry 13, Entry 14)*
+* **Services (`/services`)**: Weight 5% × 30% AI Assistance = **1.50%** *(Axios API Integration)*
+* **Context / Hooks (`/context`)**: Weight 5% × 30% AI Assistance = **1.50%** *(Entry 6)*
+* **Main Setup (`App.tsx`, `main.tsx`)**: Weight 5% × 30% AI Assistance = **1.50%** *(Entry 1)*
+* **Frontend Subtotal**: **15.25%**
+
+#### 2. Backend (Express + TypeORM — Max 50% Weight)
+* **Entities (`/entities`)**: Weight 10% × 30% AI Assistance = **3.00%** *(Entry 2)*
+* **Controllers (`/controllers`)**: Weight 15% × 45% AI Assistance = **6.75%** *(Entry 4, Entry 10, Entry 11, Entry 12, Entry 13, Entry 14)*
+* **Routes (`/routes`)**: Weight 5% × 40% AI Assistance = **2.00%** *(Entry 10, Entry 11, Entry 12, Entry 13, Entry 14)*
+* **Middlewares (`/middlewares`)**: Weight 5% × 35% AI Assistance = **1.75%** *(JWT Auth & Multer Upload)*
+* **Backend Services / Utilities**: Weight 15% × 0% AI Assistance = **0.00%**
+* **Backend Subtotal**: **13.50%**
+
+#### 3. Infrastructure & Deployment (Max 10% Weight)
+* **Database Config (`db.config.ts`)**: Weight 6% × 50% AI Assistance = **3.00%** *(Entry 3)*
+* **Redis Config (`redis.config.ts`)**: Weight 4% × 50% AI Assistance = **2.00%** *(Entry 15)*
+* **Server Setup & Deployment**: Weight 4% × 35% AI Assistance = **1.40%** *(Entry 1, Entry 16)*
+* **Infrastructure Subtotal**: **6.40%**
+
+---
+
+### Final AI Contribution Formula
+
+* **Total AI Usage** = 15.25\% x **Frontend** + 13.50\% x **Backend** + 6.40\% x **Infrastructure** = **35.15%**
+
+> **Academic Integrity Statement:**
+> *"This project was developed with partial AI assistance using Google Antigravity AI as a pair programmer for boilerplate generation, TypeScript type debugging, reference templates, and architectural advice. Based on the App Dev Lab rubric weights, AI contribution is calculated at **30.5% – 35.15%**, distributed as follows: Frontend (15.25%), Backend (13.50%), and Infrastructure (6.40%). All 16 AI interactions are documented chronologically with prompt excerpts and personal understanding notes in `ai_prompt_history.md`."*
+
+

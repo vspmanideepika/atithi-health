@@ -1,0 +1,1123 @@
+:root {
+    --primary-color: #0284c7;
+    --primary-hover: #0369a1;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-light: #cbd5e1;
+    --bg-card: #00C0A3;
+    --bg-input: #f8fafc;
+
+    --error-bg: #fee2e2;
+    --error-text: #dc2626;
+    --success-color: #16a34a;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-main);
+    background-color: #c1e8fbeb;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p,
+.card-subtitle,
+.card-text {
+    font-size: 1.25rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+}
+
+.booking-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.booking-input.error {
+    border: 1px solid red;
+}
+
+.error-text {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.general-error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.booking-button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.booking-button:hover {
+    background-color: #0056b3;
+}
+
+.link-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.success-message {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.card-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    align-items: stretch;
+}
+
+.card-grid .card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 590px;
+    /* Aligns side-by-side card boundaries to match the 1200px hero container */
+}
+
+.card {
+    background-color: var(--bg-card);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-light);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h5,
+.card-body .card-title {
+    margin-top: 0 !important;
+    margin-bottom: 4px !important;
+}
+
+.card-body h6,
+.card-body .card-subtitle {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+}
+
+.card-body {
+    padding: 16px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.card-btn {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.home-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-banner {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+    border-radius: 16px;
+    color: #0f172a;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.hero-tagline {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0A4EA3;
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    background-color: #dbeafe;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    border: 1px solid #bfdbfe;
+    box-shadow: 0 2px 4px rgba(10, 78, 163, 0.05);
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    color: #0A4EA3;
+}
+
+.hero-description {
+    max-width: 700px;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.hero-btn-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: #00A88F;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 168, 143, 0.2);
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #008770;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ef4444;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1e293b;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+/* Profile Page Styles */
+.profile-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.profile-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-light);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-avatar-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0284c7, #00c0a3);
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 4px 0;
+}
+
+.profile-email {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0 0 16px 0;
+    word-break: break-all;
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.badge-patient {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+}
+
+.badge-attendant {
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.badge-hospital-admin {
+    background-color: #f3e8ff;
+    color: #6b21a8;
+    border: 1px solid #e9d5ff;
+}
+
+.badge-admin {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
+.profile-meta-info {
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 16px;
+    text-align: left;
+}
+
+.meta-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+}
+
+.meta-label {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.meta-value {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.profile-details-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-light);
+    padding: 30px;
+    align-self: start;
+}
+
+.profile-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0A4EA3;
+    margin: 0 0 20px 0;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 576px) {
+    .profile-details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.profile-detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.detail-value {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-main);
+    background-color: #f8fafc;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    min-height: 24px;
+}
+
+.detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.detail-tag {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+}
+
+.profile-edit-btn {
+    background-color: #00A88F;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.profile-edit-btn:hover {
+    background-color: #008770;
+}
+
+.profile-action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* ==========================================================================
+   Admin Portal, KPI Analytics Cards, Hospital Audit Grid & Modal Styles
+   ========================================================================== */
+
+.section-heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0A4EA3;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-subtitle {
+    font-size: 0.95rem;
+    color: #475569;
+    margin: 4px 0 0 0;
+}
+
+/* KPI Analytics Cards Grid */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1100px) {
+    .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.kpi-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.kpi-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+
+.kpi-card.hospitals::before { background: linear-gradient(90deg, #0284c7, #38bdf8); }
+.kpi-card.packages::before { background: linear-gradient(90deg, #00c0a3, #10b981); }
+.kpi-card.bookings::before { background: linear-gradient(90deg, #8b5cf6, #a855f7); }
+.kpi-card.satisfaction::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+
+.kpi-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+
+.kpi-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.kpi-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.kpi-icon-box.hospitals { background-color: #e0f2fe; color: #0284c7; }
+.kpi-icon-box.packages { background-color: #d1fae5; color: #059669; }
+.kpi-icon-box.bookings { background-color: #ede9fe; color: #7c3aed; }
+.kpi-icon-box.satisfaction { background-color: #fef3c7; color: #d97706; }
+
+.kpi-value-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.kpi-number {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1;
+}
+
+.kpi-unit {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.kpi-description {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0 0 14px 0;
+    line-height: 1.4;
+}
+
+.kpi-footer {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 12px;
+    margin-top: auto;
+}
+
+/* Status Chips inside KPI Card */
+.status-chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.status-chip {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.status-chip.pending { background-color: #fef3c7; color: #b45309; }
+.status-chip.confirmed { background-color: #dbeafe; color: #1d4ed8; }
+.status-chip.completed { background-color: #dcfce7; color: #15803d; }
+.status-chip.cancelled { background-color: #fee2e2; color: #b91c1c; }
+
+/* Utilization Progress Bar */
+.utilization-bar-wrapper {
+    background-color: #f1f5f9;
+    height: 8px;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.utilization-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+    border-radius: 9999px;
+    transition: width 0.6s ease;
+}
+
+/* Star Rating Bars */
+.star-rating-summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.star-gold {
+    color: #f59e0b;
+    font-size: 1.1rem;
+}
+
+/* Partner Hospital Audit Grid Section */
+.hospital-search-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.hospital-search-input {
+    flex: 1;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.hospital-search-input:focus {
+    outline: none;
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+}
+
+.audit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 1100px) {
+    .audit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .audit-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.audit-card {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+}
+
+.audit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.09);
+    border-color: #00c0a3;
+}
+
+.audit-card-header {
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+}
+
+.hospital-badge-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.hospital-region-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0369a1;
+    background-color: #e0f2fe;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.audit-hospital-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 6px 0;
+    line-height: 1.3;
+}
+
+.audit-hospital-location {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.admin-rep-box {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+}
+
+.admin-rep-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.admin-rep-name {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0;
+}
+
+.admin-rep-email {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 2px 0 0 0;
+}
+
+.audit-metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.audit-metric-box {
+    background-color: #f8fafc;
+    border: 1px solid #edf2f7;
+    border-radius: 8px;
+    padding: 10px 8px;
+    text-align: center;
+}
+
+.audit-metric-num {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0A4EA3;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.audit-metric-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+}
+
+.completion-rate-bar-container {
+    margin-bottom: 18px;
+}
+
+.completion-rate-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+.completion-rate-bar {
+    height: 7px;
+    background-color: #e2e8f0;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.completion-rate-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #10b981, #00c0a3);
+    border-radius: 9999px;
+}
+
+.btn-inspect-hospital {
+    width: 100%;
+    background-color: #0A4EA3;
+    color: #ffffff;
+    border: none;
+    padding: 11px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(10, 78, 163, 0.2);
+}
+
+.btn-inspect-hospital:hover {
+    background-color: #083c7d;
+    box-shadow: 0 4px 12px rgba(10, 78, 163, 0.35);
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-content-card {
+    background: #ffffff;
+    border-radius: 16px;
+    max-width: 960px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    animation: modalPop 0.25s ease-out;
+}
+
+@keyframes modalPop {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-header-section {
+    padding: 24px 30px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.modal-hospital-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    color: #ffffff;
+}
+
+.modal-close-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.modal-tabs-bar {
+    display: flex;
+    background-color: #f1f5f9;
+    padding: 0 30px;
+    border-bottom: 1px solid #e2e8f0;
+    gap: 16px;
+    overflow-x: auto;
+}
+
+.modal-tab-button {
+    background: none;
+    border: none;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.modal-tab-button.active {
+    color: #0A4EA3;
+    border-bottom-color: #0A4EA3;
+    background-color: #ffffff;
+}
+
+.modal-body-content {
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.inspect-summary-banner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+    .inspect-summary-banner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.inspect-summary-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.inspect-summary-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.inspect-summary-val {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* Modal Content Cards */
+.inspect-items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 650px) {
+    .inspect-items-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.inspect-card-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.inspect-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 6px 0;
+}
+
+.inspect-card-desc {
+    font-size: 0.88rem;
+    color: #475569;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+.inspect-card-meta {
+    font-size: 0.82rem;
+    color: #64748b;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.review-item-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+}
+
+.review-header-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.review-comment-text {
+    font-size: 0.92rem;
+    color: #334155;
+    margin: 0;
+    line-height: 1.5;
+    font-style: italic;
+}
